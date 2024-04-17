@@ -1,10 +1,10 @@
 #N canvas 556 87 691 398 10;
 #X obj 29 25 cnv 15 440 220 empty \$1-main_canvas_rcv today\ is\ 17/4/2024\ and\ today\ will\ never\ happen\ again 8 12 0 14 #ffe3c6 #404040 0;
-#X obj 42 144 hsl 128 15 2 50 0 1 \$1-numsteps_playing \$1-numsteps_playing_rcv number\ of\ steps -2 8 1 12 #fc0400 #9c9c9c #fcfcfc 6400 1;
-#X obj 42 163 hsl 128 15 0 1 0 1 \$1-randomchance \$1-randomchance_rcv chance\ of\ playback -2 8 1 12 #fc0400 #9c9c9c #fcfcfc 2500 1;
-#X obj 41 55 tgl 25 1 \$1-playstop \$1-playstop_rcv Play/Stop 26 7 0 10 #c6ffc7 #000000 #000000 1 1;
-#X obj 42 200 hsl 128 15 0 1 0 1 \$1-reversechance \$1-reversechance_rcv chance\ of\ reverse -2 8 1 12 #fc0400 #9c9c9c #fcfcfc 0 1;
-#N canvas 163 192 954 680 guts 1;
+#X obj 42 144 hsl 128 15 2 50 0 1 \$1-numsteps_playing \$1-numsteps_playing_rcv number\ of\ steps -2 8 1 12 #fc0400 #9c9c9c #fcfcfc 9000 1;
+#X obj 42 163 hsl 128 15 0 1 0 1 \$1-randomchance \$1-randomchance_rcv chance\ of\ playback -2 8 1 12 #fc0400 #9c9c9c #fcfcfc 10900 1;
+#X obj 41 55 tgl 25 1 \$1-playstop \$1-playstop_rcv Play/Stop 26 7 0 10 #c6ffc7 #000000 #000000 0 1;
+#X obj 42 200 hsl 128 15 0 1 0 1 \$1-reversechance \$1-reversechance_rcv chance\ of\ reverse -2 8 1 12 #fc0400 #9c9c9c #fcfcfc 1700 1;
+#N canvas 28 192 954 680 guts 0;
 #X obj 21 325 *~;
 #X obj 49 296 line~;
 #X msg 46 266 1 20;
@@ -115,7 +115,7 @@
 #X connect 45 0 43 0;
 #X connect 46 0 44 0;
 #X restore 69 456 pd clocking;
-#N canvas 0 25 813 716 dateseed 0;
+#N canvas 550 282 813 716 dateseed 0;
 #X msg 45 120 bang;
 #X obj 42 14 loadbang;
 #X obj 270 41 zexy;
@@ -141,6 +141,7 @@
 #X obj 132 23 r \$1-playstop;
 #X obj 46 53 r \$1-numsamples;
 #X obj 138 75 print \$1-playbang;
+#X obj 163 454 bng 16 250 50 0 empty empty empty 0 -8 0 10 #fcfcfc #000000 #000000;
 #X connect 0 0 3 0;
 #X connect 1 0 18 0;
 #X connect 3 0 10 0;
@@ -169,6 +170,7 @@
 #X connect 17 0 15 0;
 #X connect 18 0 0 0;
 #X connect 22 0 4 0;
+#X connect 25 0 11 0;
 #X restore 69 481 pd dateseed;
 #X msg 79 90 vis 1 1;
 #X obj 883 430 s dsp_on_bang;
@@ -252,7 +254,7 @@
 #X connect 27 0 10 0;
 #X connect 28 0 35 0;
 #X restore 170 485 pd midi;
-#N canvas 257 107 951 765 serial 0;
+#N canvas 453 107 951 765 serial 0;
 #X floatatom 262 536 5 0 0 0 - - - 0;
 #X obj 17 396 + 2;
 #X obj 146 437 + 2;
@@ -285,7 +287,7 @@
 #X msg 248 50 1;
 #X obj 313 92 r loop_light;
 #X obj 76 383 print;
-#X obj 44 179 comport 0 9600;
+#X obj 44 166 comport 0 9600;
 #X msg 111 102 open 3;
 #X obj 651 938 text get \$0-dirfiles;
 #X floatatom 646 915 5 0 0 0 - - - 0;
@@ -308,7 +310,6 @@
 #X connect 9 0 27 0;
 #X connect 9 0 31 0;
 #X connect 10 0 2 0;
-#X connect 11 0 6 0;
 #X connect 12 0 32 0;
 #X connect 13 0 28 0;
 #X connect 14 0 40 0;
@@ -389,7 +390,7 @@
 #X obj 542 86 hsl 128 15 0 1023 0 0 \$1-randomiser \$1-randomiser_rcv randomiser -2 8 1 12 #fc0400 #9c9c9c #fcfcfc 0 1;
 #X text 229 132 change this to stereo if desired (then restart);
 #X msg 404 538 open recordings/record_\$1.wav;
-#X obj 540 63 hsl 128 15 0 1 0 1 \$1-rate \$1-rate_rcv playback\ rate -2 8 1 12 #fc0400 #9c9c9c #fcfcfc 12700 1;
+#X obj 540 63 hsl 128 15 0 1 0 1 \$1-rate \$1-rate_rcv playback\ rate -2 8 1 12 #fc0400 #9c9c9c #fcfcfc 5842 1;
 #X text 40 327 why was this here;
 #X obj 35 119 clone ys.agency_mono 15 \$1;
 #X obj 51 413 sample_selector \$1 \$2;
@@ -447,16 +448,16 @@
 #X connect 49 0 3 0;
 #X connect 50 0 5 0;
 #X restore 381 299 pd guts;
-#X obj 43 86 hsl 128 15 0 26.189 0 0 empty \$1-location_view timing -2 8 1 12 #c4c4fc #c4fcfc #000000 0 1;
-#X obj 42 124 hsl 128 15 0 1 0 1 \$1-fadeout \$1-fadeout_rcv fadeout -2 8 1 12 #fc0400 #fcfcfc #fcfcfc 9500 0;
-#X obj 42 181 hsl 128 15 0 1 0 1 \$1-volume_rand \$1-volume_rand_rcv volume\ randomise -2 8 1 12 #fc0400 #9c9c9c #fcfcfc 9000 1;
+#X obj 43 86 hsl 128 15 0 36.0157 0 0 empty \$1-location_view timing -2 8 1 12 #c4c4fc #c4fcfc #000000 0 1;
+#X obj 42 124 hsl 128 15 0 1 0 1 \$1-fadeout \$1-fadeout_rcv fadeout -2 8 1 12 #fc0400 #fcfcfc #fcfcfc 12700 0;
+#X obj 42 181 hsl 128 15 0 1 0 1 \$1-volume_rand \$1-volume_rand_rcv volume\ randomise -2 8 1 12 #fc0400 #9c9c9c #fcfcfc 5400 1;
 #X obj 190 200 bng 15 250 50 0 \$1-record_one_minute empty record\ one\ minute 17 7 0 10 #ffe3c6 #000000 #000000;
 #X obj 326 131 nbx 5 14 -1e+37 1e+37 0 1 \$1-num_voices \$1-num_voices_rcv number\ of\ voices 0 -8 0 14 #ffe3c6 #000000 #000000 15 256;
-#X obj 327 222 nbx 5 14 -1e+37 1e+37 0 1 \$1-numsamples \$1-numsamples_rcv number\ of\ samples 0 -8 0 14 #ffe3c6 #000000 #000000 2750 256;
+#X obj 327 222 nbx 5 14 -1e+37 1e+37 0 1 \$1-numsamples \$1-numsamples_rcv number\ of\ samples 0 -8 0 14 #ffe3c6 #000000 #000000 63 256;
 #X text 321 147 (also change in guts);
 #X obj 123 105 tgl 15 0 \$1-rate_variation \$1-rate_variation_rcv rate\ variation 17 7 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 42 218 hsl 128 15 0 1 0 1 \$1-pitchrange \$1-pitchrange_rcv pitch\ range -2 8 1 12 #fc0400 #9c9c9c #fcfcfc 0 1;
-#X obj 39 105 nbx 5 14 40 200 0 1 \$1-bpm \$1-bpm_rcv bpm 60 8 0 10 #fcfcfc #000000 #000000 120 256;
+#X obj 42 218 hsl 128 15 0 1 0 1 \$1-pitchrange \$1-pitchrange_rcv pitch\ range -2 8 1 12 #fc0400 #9c9c9c #fcfcfc 6300 1;
+#X obj 39 105 nbx 5 14 40 200 0 1 \$1-bpm \$1-bpm_rcv bpm 60 8 0 10 #fcfcfc #000000 #000000 141 256;
 #X obj 130 55 bng 25 250 50 0 \$1-play_next \$1-play_next_rcv play\ next 27 5 0 10 #c6ffc7 #000000 #000000;
 #X obj 358 336 outlet~;
 #X obj 411 335 outlet~;
