@@ -1,5 +1,16 @@
 #N canvas 396 283 948 404 12;
 #X obj 165 324 dac~;
 #X obj 45 41 ys.today 1;
+#X text 570 50 to do:;
+#X text 571 78 - check sounds in folder now;
+#X text 572 97 - remove that folder;
+#X text 575 118 - push to git;
+#X text 579 138 - add new "sounds" folder;
+#X text 579 180 - add files into sounds forlder for testing;
+#X text 584 158 - push again;
+#X text 580 200 - ignore .wav in git;
+#X text 583 226 - put this on a Pi;
+#X text 576 278 - if not \, copy files from stick to sounds folder;
+#X text 576 250 - try with USB stick (mount stick to sounds);
 #X connect 1 0 0 0;
 #X connect 1 1 0 1;
