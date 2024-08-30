@@ -1,4 +1,4 @@
-#N canvas 180 329 1392 564 10;
+#N canvas 97 273 1392 564 10;
 #X obj 221 152 list prepend;
 #X obj 227 191 list trim;
 #X floatatom 206 282 5 0 0 0 - - - 0;
@@ -617,10 +617,12 @@
 #X obj 63 22 loadbang;
 #X msg 63 43 1;
 #X obj 156 24 r looplight;
+#X obj 232 452 print analog0;
 #X connect 0 0 1 0;
 #X connect 1 0 12 0;
 #X connect 1 0 51 0;
 #X connect 2 0 23 0;
+#X connect 2 0 69 0;
 #X connect 3 0 24 0;
 #X connect 4 0 25 0;
 #X connect 8 0 6 0;
