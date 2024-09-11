@@ -621,6 +621,9 @@
 #X obj 581 195 print ditial0;
 #X obj 668 197 print digital2;
 #X obj 721 210 print digital3;
+#X obj 671 348 sel 0 1;
+#X obj 672 380 print bang0;
+#X obj 757 383 print bang1;
 #X connect 0 0 1 0;
 #X connect 1 0 12 0;
 #X connect 1 0 51 0;
@@ -661,6 +664,7 @@
 #X connect 40 0 69 0;
 #X connect 41 0 46 0;
 #X connect 41 0 70 0;
+#X connect 41 0 73 0;
 #X connect 42 0 47 0;
 #X connect 42 0 71 0;
 #X connect 43 0 48 0;
@@ -690,3 +694,5 @@
 #X connect 66 0 61 0;
 #X connect 67 0 61 0;
 #X connect 69 0 10 0;
+#X connect 73 0 74 0;
+#X connect 73 1 75 0;
