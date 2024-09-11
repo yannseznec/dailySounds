@@ -1,4 +1,4 @@
-#N canvas 235 54 1169 590 10;
+#N canvas 393 330 1169 590 10;
 #X obj 65 268 inlet;
 #X obj 67 385 outlet;
 #X floatatom 67 310 5 0 0 0 - - - 0;
@@ -44,7 +44,7 @@
 #X obj 301 224 s \$1-sample_selector_go;
 #X obj 67 335 tabread \$1-sample_selector;
 #X obj 675 244 r \$1-num_voices;
-#X obj 761 370 r \$1-num_voices;
+#X obj 777 334 r \$1-num_voices;
 #X obj 461 51 r \$1-seed;
 #X obj 663 547 symbol sounds;
 #X obj 375 163 bng 16 250 50 0 empty empty empty 0 -8 0 10 #fcfcfc #000000 #000000;
