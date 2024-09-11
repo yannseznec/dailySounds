@@ -109,7 +109,6 @@
 #X connect 8 0 38 0;
 #X connect 8 0 39 0;
 #X connect 8 0 49 0;
-#X connect 8 0 75 0;
 #X connect 9 0 3 0;
 #X connect 9 0 54 0;
 #X connect 10 0 11 0;
@@ -263,7 +262,7 @@
 #X restore 660 526 graph;
 #X obj 303 273 r \$1-seed;
 #X obj 303 294 t b;
-#X obj 35 119 clone ys.agency_mono 7 \$1;
+#X obj 35 119 clone ys.agency_mono 10 \$1;
 #X connect 1 0 0 1;
 #X connect 1 0 11 1;
 #X connect 2 0 1 0;
@@ -312,7 +311,7 @@
 #X obj 41 124 hsl 128 15 0 1 0 1 \$1-fadeout \$1-fadeout_rcv fadeout -2 8 1 12 #fc0400 #fcfcfc #fcfcfc 900 0;
 #X obj 42 220 hsl 128 15 0 1 0 1 \$1-pan_rand \$1-pan_rand_rcv pan\ randomise -2 8 1 12 #fc0400 #9c9c9c #fcfcfc 4400 1;
 #X obj 190 200 bng 15 250 50 0 \$1-record_one_minute empty record\ one\ minute 17 7 0 10 #ffe3c6 #000000 #000000;
-#X obj 326 131 nbx 5 14 -1e+37 1e+37 0 1 \$1-num_voices \$1-num_voices_rcv number\ of\ voices 0 -8 0 14 #ffe3c6 #000000 #000000 7 256;
+#X obj 326 131 nbx 5 14 -1e+37 1e+37 0 1 \$1-num_voices \$1-num_voices_rcv number\ of\ voices 0 -8 0 14 #ffe3c6 #000000 #000000 10 256;
 #X obj 327 222 nbx 5 14 -1e+37 1e+37 0 1 \$1-numsamples \$1-numsamples_rcv number\ of\ samples 0 -8 0 14 #ffe3c6 #000000 #000000 63 256;
 #X text 321 147 (also change in guts);
 #X obj 123 105 tgl 15 0 \$1-rate_variation \$1-rate_variation_rcv rate\ variation 17 7 0 10 #fcfcfc #000000 #000000 0 1;
