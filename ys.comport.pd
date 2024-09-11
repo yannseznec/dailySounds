@@ -618,6 +618,7 @@
 #X obj 156 24 r looplight;
 #X obj 232 452 print analog0;
 #X obj 224 84 comport \$1 115200;
+#X obj 581 195 print ditial0;
 #X connect 0 0 1 0;
 #X connect 1 0 12 0;
 #X connect 1 0 51 0;
@@ -657,6 +658,7 @@
 #X connect 39 0 69 0;
 #X connect 40 0 69 0;
 #X connect 41 0 46 0;
+#X connect 41 0 70 0;
 #X connect 42 0 47 0;
 #X connect 43 0 48 0;
 #X connect 44 0 49 0;
