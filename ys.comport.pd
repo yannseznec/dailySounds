@@ -617,7 +617,7 @@
 #X msg 63 43 1;
 #X obj 156 24 r looplight;
 #X obj 232 452 print analog0;
-#X obj 224 84 comport \$1 1200;
+#X obj 224 84 comport \$1 4800;
 #X connect 0 0 1 0;
 #X connect 1 0 12 0;
 #X connect 1 0 51 0;
