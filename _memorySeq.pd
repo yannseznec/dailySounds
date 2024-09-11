@@ -55,15 +55,15 @@
 #X obj 135 523 s 1-play_next_rcv;
 #X obj 164 212 print playStop;
 #X obj 339 210 print playNext;
-#X obj 349 447 print pitchrange;
+#X obj 349 447 print volrand;
 #X connect 0 0 31 0;
 #X connect 2 0 23 0;
 #X connect 4 0 10 0;
 #X connect 5 0 12 0;
 #X connect 6 0 13 0;
-#X connect 6 0 52 0;
 #X connect 7 0 14 0;
 #X connect 8 0 15 0;
+#X connect 8 0 52 0;
 #X connect 16 0 35 0;
 #X connect 17 0 4 0;
 #X connect 18 0 39 0;
