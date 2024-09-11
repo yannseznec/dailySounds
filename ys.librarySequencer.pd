@@ -320,9 +320,9 @@
 #X obj 130 55 bng 25 250 50 0 \$1-play_next \$1-play_next_rcv play\ next 27 5 0 10 #c6ffc7 #000000 #000000;
 #X obj 358 336 outlet~;
 #X obj 416 335 outlet~;
-#X obj 325 182 nbx 5 14 -1e+37 1e+37 0 1 empty \$1-seed current\ seed 0 -8 0 14 #ffe3c6 #000000 #000000 88 256;
+#X obj 325 182 nbx 5 14 -1e+37 1e+37 0 1 empty \$1-seed current\ seed 0 -8 0 14 #ffe3c6 #000000 #000000 89 256;
 #X obj 326 58 bng 25 250 50 0 \$1-new_seed \$1-new_seed_rcv new\ seed 27 5 0 10 #c6ffc7 #000000 #000000;
-#X obj 571 196 nbx 5 17 -1e+37 1e+37 0 1 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000 88 256;
+#X obj 571 196 nbx 5 17 -1e+37 1e+37 0 1 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000 89 256;
 #X obj 569 43 loadbang;
 #X obj 570 118 bng 19 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
 #X obj 570 164 +;

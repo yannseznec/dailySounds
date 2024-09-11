@@ -1,4 +1,4 @@
-#N canvas 60 383 990 447 12;
+#N canvas 119 225 990 447 12;
 #X obj 165 324 dac~;
 #X obj 51 30 ys.librarySequencer 1;
 #X obj 599 229 ys.comport;
@@ -53,6 +53,7 @@
 #X obj 135 442 change;
 #X obj 135 493 bng 19 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
 #X obj 135 523 s 1-play_next_rcv;
+#X obj 164 212 print playStop;
 #X connect 0 0 31 0;
 #X connect 2 0 23 0;
 #X connect 4 0 10 0;
@@ -74,6 +75,7 @@
 #X connect 29 0 27 0;
 #X connect 30 0 28 0;
 #X connect 31 0 1 0;
+#X connect 31 0 50 0;
 #X connect 32 0 33 0;
 #X connect 33 0 34 0;
 #X connect 34 0 37 0;
