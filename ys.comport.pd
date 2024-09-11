@@ -622,7 +622,6 @@
 #X connect 1 0 12 0;
 #X connect 1 0 51 0;
 #X connect 2 0 23 0;
-#X connect 2 0 68 0;
 #X connect 3 0 24 0;
 #X connect 4 0 25 0;
 #X connect 8 0 6 0;
