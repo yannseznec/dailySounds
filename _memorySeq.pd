@@ -55,7 +55,7 @@
 #X obj 135 523 s 1-play_next_rcv;
 #X obj 164 212 print playStop;
 #X obj 339 210 print playNext;
-#X obj 349 447 print playchance;
+#X obj 354 497 print playchance;
 #X obj 469 428 * 4;
 #X text 510 423 THIS IS BAD;
 #X connect 0 0 31 0;
@@ -100,7 +100,6 @@
 #X connect 47 0 46 0;
 #X connect 48 0 49 0;
 #X connect 53 0 10 0;
-#X connect 53 0 52 0;
 #X restore 590 268 pd mappings;
 #X text 608 61 need to figure out better mapping for the fadeout (maybe done?);
 #X connect 1 0 0 0;
